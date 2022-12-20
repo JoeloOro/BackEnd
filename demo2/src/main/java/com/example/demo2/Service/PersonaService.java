@@ -3,7 +3,6 @@ package com.example.demo2.Service;
 
 import com.example.demo2.Repository.PersonaRepository;
 import com.example.demo2.model.Persona;
-//import static com.fasterxml.jackson.databind.cfg.CoercionInputShape.String;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,9 +34,12 @@ public class PersonaService implements IPersonaService{
         return persoRepo.findById(id).orElse(null);
     }
     
-    /*public Persona login(String email, String password) {
-        return persoRepo.findByemailAndpassword(email, password);
-    }*/
+    public PersonaDTO login(String email, String password) {
+        Persona persona = persoRepo.findByEmailAndPassword(email, password);
+        PersonaDTO personaDTO = new PersonaDTO(persona.getId(), persona.getUbication(), persona.getPosition(), persona.getFullName(), persona.getImage());
+        return personaDTO;
+        
+    }
     
     
     

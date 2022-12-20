@@ -3,6 +3,7 @@ package com.example.demo2.Controller;
 
 import com.example.demo2.model.Persona;
 import com.example.demo2.Service.IPersonaService;
+import com.example.demo2.Service.PersonaDTO;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -39,10 +40,11 @@ public class Controller {
     public void buscarPersona (@PathVariable Long id) {
         PersoServ.borrarPersona(id);
     }
-    /*@PostMapping("/login")
-    public Persona login (@RequestBody Persona Persona){
-        return PersoServ.login(Persona.Getemail, Persona.Getpassword());
-    }*/
+    @PostMapping("/login/persona")
+    @ResponseBody
+    public PersonaDTO login(@RequestBody Persona persona){
+        return PersoServ.login(persona.getEmail(), persona.getPassword());
+    }
 
    
     
