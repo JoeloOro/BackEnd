@@ -36,7 +36,7 @@ public class PersonaService implements IPersonaService{
     
     public PersonaDTO login(String email, String password) {
         Persona persona = persoRepo.findByEmailAndPassword(email, password);
-        PersonaDTO personaDTO = new PersonaDTO(persona.getId(), persona.getUbication(), persona.getPosition(), persona.getFullName(), persona.getImage());
+        PersonaDTO personaDTO = new PersonaDTO(persona.getId(), persona.getNombre(), persona.getUrlImagen(), persona.getAcercaDe(), persona.getUbicacion());
         return personaDTO;
         
     }

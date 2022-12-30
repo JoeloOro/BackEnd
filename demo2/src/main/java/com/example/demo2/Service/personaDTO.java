@@ -4,21 +4,25 @@ package com.example.demo2.Service;
 
 public class PersonaDTO {
     long id;
-    String ubication;
-    String position;
-    String fullName;
-    String image;
+    String nombre;
+    String urlImagen;
+    String acercaDe;
+    String ubicacion;
 
     public PersonaDTO() {
     }
 
-    public PersonaDTO(long id, String ubication, String position, String fullName, String image) {
+    public PersonaDTO(long id, String nombre, String urlImagen, String acercaDe, String ubicacion) {
         this.id = id;
-        this.ubication = ubication;
-        this.position = position;
-        this.fullName = fullName;
-        this.image = image;
+        this.nombre = nombre;
+        this.urlImagen = urlImagen;
+        this.acercaDe = acercaDe;
+        this.ubicacion = ubicacion;
     }
+    
+    
+    
+   
 
     public long getId() {
         return id;
@@ -28,37 +32,41 @@ public class PersonaDTO {
         this.id = id;
     }
 
-    public String getUbication() {
-        return ubication;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setUbication(String ubication) {
-        this.ubication = ubication;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getPosition() {
-        return position;
+    public String getUrlImagen() {
+        return urlImagen;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setUrlImagen(String urlImagen) {
+        this.urlImagen = urlImagen;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getAcercaDe() {
+        return acercaDe;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setAcercaDe(String acercaDe) {
+        this.acercaDe = acercaDe;
     }
 
-    public String getImage() {
-        return image;
+    public String getUbicacion() {
+        return ubicacion;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
+
+    
+
+    
 
     
 }

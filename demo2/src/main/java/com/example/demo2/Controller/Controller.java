@@ -44,6 +44,7 @@ public class Controller {
     }
     @PostMapping("/login/persona")
     @ResponseBody
+    @CrossOrigin(origins = {"http://localhost:4200/"})
     public PersonaDTO login(@RequestBody Persona persona){
         return PersoServ.login(persona.getEmail(), persona.getPassword());
     }
