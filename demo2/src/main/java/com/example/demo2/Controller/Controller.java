@@ -20,16 +20,16 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = {"http://localhost:4200/"})
 public class Controller {
   
-   
+
   
    @Autowired
    private IPersonaService PersoServ;
    
    
     
-    @PostMapping ("/new/persona")
-    public void agregarPersona (@RequestBody Persona pers){
-        PersoServ.crearPersona(pers);
+    @GetMapping ("/ver/perfil")
+    public Persona buscarPersona() {
+        return PersoServ.buscarPersona((long)1);
     }
     
     @GetMapping ("/ver/personas")
@@ -39,15 +39,16 @@ public class Controller {
     }
     
     @DeleteMapping ("/delete/{id}")
-    public void buscarPersona (@PathVariable Long id) {
+    public void borrarPersona (@PathVariable Long id) {
         PersoServ.borrarPersona(id);
     }
     @PostMapping("/login/persona")
     @ResponseBody
-    @CrossOrigin(origins = {"http://localhost:4200/"})
     public PersonaDTO login(@RequestBody Persona persona){
         return PersoServ.login(persona.getEmail(), persona.getPassword());
     }
+    
+    
 
    
     

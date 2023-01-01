@@ -8,21 +8,19 @@ public class PersonaDTO {
     String urlImagen;
     String acercaDe;
     String ubicacion;
+    String posicion;
 
     public PersonaDTO() {
     }
 
-    public PersonaDTO(long id, String nombre, String urlImagen, String acercaDe, String ubicacion) {
+    public PersonaDTO(long id, String nombre, String urlImagen, String acercaDe, String ubicacion, String posicion) {
         this.id = id;
         this.nombre = nombre;
         this.urlImagen = urlImagen;
         this.acercaDe = acercaDe;
         this.ubicacion = ubicacion;
+        this.posicion = posicion;
     }
-    
-    
-    
-   
 
     public long getId() {
         return id;
@@ -63,6 +61,18 @@ public class PersonaDTO {
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
     }
+
+    public String getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(String posicion) {
+        this.posicion = posicion;
+    }
+    
+   
+
+    
 
     
 

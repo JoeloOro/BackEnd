@@ -11,6 +11,7 @@ public interface IPersonaService {
     public void crearPersona (Persona per);
     public void borrarPersona (Long id);
     public Persona buscarPersona (Long id);
+    public PersonaDTO Persona (Long id);
 
 
     public PersonaDTO login(String email, String password);

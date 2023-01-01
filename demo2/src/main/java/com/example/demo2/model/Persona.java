@@ -22,6 +22,7 @@ public class Persona {
     private String email;
     private String password;
     String nombre;
+    String posicion;
     String urlImagen;
     String acercaDe;
     String ubicacion;
@@ -37,11 +38,12 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(Long id, String email, String password, String nombre, String urlImagen, String acercaDe, String ubicacion, List<Experiencia> experiencia, List<Educacion> educacion, List<Skill> skill, List<Proyectos> proyectos) {
+    public Persona(Long id, String email, String password, String nombre, String posicion, String urlImagen, String acercaDe, String ubicacion, List<Experiencia> experiencia, List<Educacion> educacion, List<Skill> skill, List<Proyectos> proyectos) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.nombre = nombre;
+        this.posicion = posicion;
         this.urlImagen = urlImagen;
         this.acercaDe = acercaDe;
         this.ubicacion = ubicacion;
@@ -50,6 +52,8 @@ public class Persona {
         this.skill = skill;
         this.proyectos = proyectos;
     }
+
+    
 
    
 
