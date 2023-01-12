@@ -6,7 +6,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Experiencia {
@@ -21,14 +20,12 @@ public class Experiencia {
     String fin;
     String domicilio;
     String urlImagen;
-    @ManyToOne
-    private Persona persona;
 
     public Experiencia() {
     
     }
 
-    public Experiencia(Long id, String nombre, String lugar, String jornada, String inicio, String fin, String domicilio, String urlImagen, Persona persona) {
+    public Experiencia(Long id, String nombre, String lugar, String jornada, String inicio, String fin, String domicilio, String urlImagen) {
         this.id = id;
         this.nombre = nombre;
         this.lugar = lugar;
@@ -37,7 +34,7 @@ public class Experiencia {
         this.fin = fin;
         this.domicilio = domicilio;
         this.urlImagen = urlImagen;
-        this.persona = persona;
+        
     }
 
     public Long getId() {
@@ -104,13 +101,6 @@ public class Experiencia {
         this.urlImagen = urlImagen;
     }
 
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
-    }
 
     
 

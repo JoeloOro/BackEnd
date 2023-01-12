@@ -6,7 +6,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Proyectos {
@@ -16,17 +15,16 @@ public class Proyectos {
     @Basic
     String nombre;
     String info;
-    @ManyToOne
-    private Persona persona;
+    
 
     public Proyectos() {
     }
 
-    public Proyectos(Long id, String nombre, String info, Persona persona) {
+    public Proyectos(Long id, String nombre, String info) {
         this.id = id;
         this.nombre = nombre;
         this.info = info;
-        this.persona = persona;
+        
     }
 
     public Long getId() {
@@ -51,14 +49,6 @@ public class Proyectos {
 
     public void setInfo(String info) {
         this.info = info;
-    }
-
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
     }
     
     

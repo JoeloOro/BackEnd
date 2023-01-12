@@ -6,7 +6,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Skill {
@@ -16,17 +15,14 @@ public class Skill {
     @Basic
     String nombre;
     String porcentaje;
-    @ManyToOne
-    private Persona persona;
 
     public Skill() {
     }
 
-    public Skill(Long id, String nombre, String porcentaje, Persona persona) {
+    public Skill(Long id, String nombre, String porcentaje) {
         this.id = id;
         this.nombre = nombre;
         this.porcentaje = porcentaje;
-        this.persona = persona;
     }
 
     public Long getId() {
@@ -51,14 +47,6 @@ public class Skill {
 
     public void setPorcentaje(String porcentaje) {
         this.porcentaje = porcentaje;
-    }
-
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
     }
     
     

@@ -69,6 +69,7 @@ public class PersonaDTO {
     public void setPosicion(String posicion) {
         this.posicion = posicion;
     }
+
     
    
 

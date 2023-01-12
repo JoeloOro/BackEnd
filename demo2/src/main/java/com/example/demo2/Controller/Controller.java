@@ -32,17 +32,25 @@ public class Controller {
         return PersoServ.buscarPersona((long)1);
     }
     
+    @PostMapping ("/persona/crear")
+    public void editarPersona(@RequestBody Persona pers){
+        PersoServ.crearPersona(pers);
+    }
+    
+    
     @GetMapping ("/ver/personas")
     @ResponseBody
     public List<Persona> verPersonas () {
        return PersoServ.verPersonas();   
     }
     
-    @DeleteMapping ("/delete/{id}")
+  
+    
+    @DeleteMapping ("/persona/delete/{id}")
     public void borrarPersona (@PathVariable Long id) {
         PersoServ.borrarPersona(id);
     }
-    @PostMapping("/login/persona")
+    @PostMapping("/persona/login")
     @ResponseBody
     public PersonaDTO login(@RequestBody Persona persona){
         return PersoServ.login(persona.getEmail(), persona.getPassword());

@@ -6,8 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import java.util.Date;
+
 
 @Entity
 public class Educacion {
@@ -17,23 +16,21 @@ public class Educacion {
     @Basic
     String nombre;
     String titulo;
-    Date inicio;
-    Date fin;
+    String inicio;
+    String fin;
     String urlImagen;
-    @ManyToOne
-    private Persona persona;
     
     public Educacion() {
     }
 
-    public Educacion(Long id, String nombre, String titulo, Date inicio, Date fin, String urlImagen, Persona persona) {
+    public Educacion(Long id, String nombre, String titulo, String inicio, String fin, String urlImagen) {
         this.id = id;
         this.nombre = nombre;
         this.titulo = titulo;
         this.inicio = inicio;
         this.fin = fin;
         this.urlImagen = urlImagen;
-        this.persona = persona;
+        
     }
 
     public Long getId() {
@@ -60,19 +57,19 @@ public class Educacion {
         this.titulo = titulo;
     }
 
-    public Date getInicio() {
+    public String getInicio() {
         return inicio;
     }
 
-    public void setInicio(Date inicio) {
+    public void setInicio(String inicio) {
         this.inicio = inicio;
     }
 
-    public Date getFin() {
+    public String getFin() {
         return fin;
     }
 
-    public void setFin(Date fin) {
+    public void setFin(String fin) {
         this.fin = fin;
     }
 
@@ -84,14 +81,6 @@ public class Educacion {
         this.urlImagen = urlImagen;
     }
 
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
-    }
-    
     
     
 }
