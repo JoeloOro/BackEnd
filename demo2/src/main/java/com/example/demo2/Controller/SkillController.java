@@ -20,12 +20,12 @@ public class SkillController {
     @Autowired
    private ISkillService PersoServ;
     
-    @GetMapping ("/skill/ver/{id}")
+    @GetMapping ("skill/ver/{id}")
     public Skill buscarSkill(@PathVariable Long id) {
         return PersoServ.buscarSkill(id);
     }
     
-    @PostMapping ("/skill/crear")
+    @PostMapping ("skill/crear")
     public void editarSkill(@RequestBody Skill pers){
         PersoServ.crearSkill(pers);
     }
@@ -40,7 +40,7 @@ public class SkillController {
     
   
     
-    @DeleteMapping ("/skill/delete/{id}")
+    @DeleteMapping ("skill/delete/{id}")
     public void borrarSkill(@PathVariable("id") Long id) {
         PersoServ.borrarSkill(id);
     }
