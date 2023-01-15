@@ -37,6 +37,8 @@ public class Controller {
         PersoServ.crearPersona(pers);
     }
     
+  
+    
     
     @GetMapping ("/ver/personas")
     @ResponseBody
