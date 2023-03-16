@@ -15,15 +15,17 @@ public class Proyectos {
     @Basic
     String nombre;
     String info;
+    String url;
     
 
     public Proyectos() {
     }
 
-    public Proyectos(Long id, String nombre, String info) {
+    public Proyectos(Long id, String nombre, String info, String url) {
         this.id = id;
         this.nombre = nombre;
         this.info = info;
+        this.url = url;
         
     }
 
@@ -49,6 +51,14 @@ public class Proyectos {
 
     public void setInfo(String info) {
         this.info = info;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
     
     
